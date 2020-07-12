@@ -3,8 +3,28 @@ module.exports = {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    siteUrl: 'https://fakhrusy.com',
+    social: [
+      {
+        name: "twitter",
+        url: "https://twitter.com/f_fakhrusy",
+      },
+      {
+        name: "github",
+        url: "https://github.com/mfakhrusy",
+      },
+    ],
   },
   plugins: [
+    {
+      resolve: 'gatsby-theme-blog',
+      options: {
+        preset: `theme-ui-sketchy-preset`,
+        prismPreset: `oceanic-next`,
+        webfontURL:
+          "https://fonts.googleapis.com/css?family=Architects+Daughter",
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
