@@ -5,7 +5,7 @@ module.exports = {
     siteUrl: `https://fakhrusy.com`,
     description: `Blog by me, mfakhrusy, on whatever the heck I want`,
     hero: {
-      heading: `I write about code, science, space, and math.`,
+      heading: `I write about code, science, and math.`,
       maxWidth: 652,
     },
     social: [
