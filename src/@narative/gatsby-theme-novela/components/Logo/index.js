@@ -3,7 +3,7 @@ import React from 'react';
 const Logo = () => {
   return (
     <svg style={{
-      height: '35px'
+      height: '30px'
     }}>
       <g
         transform="matrix(0.00221554,0,0,-0.00221554,0,26.252427)"
