@@ -3,9 +3,7 @@ title: Hello World
 author: Muhamad Fakhrusy
 date: '2020-07-13'
 excerpt: >-
-  With the growing community interest in Gatsby, we hope to create more
-  resources that make it easier for anyone to grasp the power of this incredible
-  tool.
+  My First Post, as I need to pass on the tradition, is a hello world post.
 hero: images/code background.jpg
 ---
 ```javascript
