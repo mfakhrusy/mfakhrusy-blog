@@ -29,7 +29,7 @@ Is Science different than Math ?
 
 
 1. No, or Maybe, or Yes, or a state between those 3,
-2. extremely improbable, but, I don't know, 
+2. extremely improbable, but I don't know, 
 3. that seems like a good idea,
 4. it's not for me to judge,
 5. I bloody hope so.
@@ -37,9 +37,9 @@ Is Science different than Math ?
 
 ## Disclaimer
 
-This post will not contain any knowledge, or any useful thing, really, but since you read this, you either:
+This post will not contain any knowledge, or "insight", or even a proper to-do list that maaybe you expected, but since you read this exact sentence, you either:
 
-1. just skim the heading and skip the first section of the post,
+1. just skim through the headings and skip the first section,
 2. read all the things
 
 and for either one, I just hope that this post is a great summary (or introduction) of what's to come.
@@ -48,4 +48,4 @@ and for either one, I just hope that this post is a great summary (or introducti
 
 I'm not a native english speaker, so pardon me if I make some silly grammar mistakes or wrong word usage. 
 
-If you have something to fix or improve in the language side of the blog, I'm very eager to know and you can reach me on many platforms that I wrote in the site's footer, or [my email](mailto:fakhrusy.m@gmail.com) even if it's just a nitpick. 
+If you have something to fix or improve in the language side of the blog, I'm very eager to know and you can reach me on many platforms that I wrote in the site's footer, or [my email](mailto:fakhrusy.m@gmail.com) even if it's just a nitpick since I am an all-rounder wannabe, and that include linguistic!
