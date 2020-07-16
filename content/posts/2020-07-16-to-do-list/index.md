@@ -15,9 +15,9 @@ I declared on the pretentious homepage heading that this blog will contains 3 pa
 - Science
 - Math
 
-Will the blog will be filled with posts on the exact order (Code, then Science, then Math, then repeat) ?
+Will the blog be filled with posts on the exact order (Code, then Science, then Math, then repeat) ?
 
-Will the blog will have the same amount of percentage from each, "part" ?
+Will the blog have the same amount of percentage from each, "part" ?
 
 Will there be a post that I "coagulate" two or more parts into one, blob of post ?
 
