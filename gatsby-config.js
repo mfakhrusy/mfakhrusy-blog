@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `mfakhrusy blog`,
+    title: `mfakhrusy blog - an amalgamation`,
     name: `mfakhrusy`,
     siteUrl: `https://fakhrusy.com`,
-    description: `Blog by me, mfakhrusy, on whatever the heck I want`,
+    description: `A self-aggregation rants and documentations about code, science, and math.`,
     hero: {
-      heading: `I write about code, science, and math.`,
+      heading: `A self-aggregation rants and documentations about code, science, and math.`,
       maxWidth: 652,
     },
     social: [
@@ -25,6 +25,10 @@ module.exports = {
         name: `linkedin`,
         url: `https://www.linkedin.com/in/mfakhrusy/`,
       },
+      {
+        name: 'stackoverflow',
+        url: 'https://stackoverflow.com/users/5835100/mfakhrusy',
+      }
     ],
   },
   plugins: [
