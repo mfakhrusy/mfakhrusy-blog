@@ -23,24 +23,23 @@ export default function BlogPage({ post, frontmatter, nextPost, previousPost }: 
       />
 
       <article>
-        <header className="mb-8">
-          <h1 className="mb-2 text-6xl font-black leading-none font-display">
+        <header>
+          <h1>
             {frontmatter.title}
           </h1>
-          <p className="text-sm">{frontmatter.date}</p>
+          <p>{frontmatter.date}</p>
         </header>
         <ReactMarkdown
-          className="mb-4 prose lg:prose-lg dark:prose-dark"
           escapeHtml={false}
           source={post.content}
           renderers={{ code: CodeBlock }}
         />
       </article>
 
-      <nav className="flex flex-wrap justify-between mb-10">
+      <nav>
         {previousPost ? (
           <Link href={"/blog/[slug]"} as={`/blog/${previousPost.slug}`}>
-            <a className="text-lg font-bold">
+            <a>
               ← {previousPost.frontmatter.title}
             </a>
           </Link>
@@ -49,7 +48,7 @@ export default function BlogPage({ post, frontmatter, nextPost, previousPost }: 
         )}
         {nextPost ? (
           <Link href={"/blog/[slug]"} as={`/blog/${nextPost.slug}`}>
-            <a className="text-lg font-bold">{nextPost.frontmatter.title} →</a>
+            <a>{nextPost.frontmatter.title} →</a>
           </Link>
         ) : (
           <div />

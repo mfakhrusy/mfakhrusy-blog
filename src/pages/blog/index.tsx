@@ -14,18 +14,18 @@ export default function Home({ posts }: Props): JSX.Element {
       <SEO title="All posts" />
       {posts.map(({ frontmatter: { title, description, date }, slug }) => (
         <article key={slug}>
-          <header className="mb-2">
-            <h3 className="mb-2">
+          <header>
+            <h3>
               <Link href={"/blog/[slug]"} as={`/blog/${slug}`}>
-                <a className="text-4xl font-bold text-yellow-600 font-display">
+                <a>
                   {title}
                 </a>
               </Link>
             </h3>
-            <span className="text-sm">{date}</span>
+            <span>{date}</span>
           </header>
           <section>
-            <p className="mb-8 text-lg">{description}</p>
+            <p>{description}</p>
           </section>
         </article>
       ))}
