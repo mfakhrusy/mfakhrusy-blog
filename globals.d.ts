@@ -13,4 +13,4 @@ declare module '*.md' {
   const attributes: Attributes;
 
   const react: () => JSX.Element;
-};
+}

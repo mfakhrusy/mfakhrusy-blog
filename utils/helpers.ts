@@ -1,5 +1,7 @@
 import SiteConfig from "@/config/seo.json";
 
-export function getSiteMetaData() {
+type SiteMetadata = typeof SiteConfig['siteMetadata'];
+
+export function getSiteMetaData(): SiteMetadata {
   return SiteConfig.siteMetadata;
-};
+}

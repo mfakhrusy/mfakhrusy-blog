@@ -4,9 +4,17 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import style from "react-syntax-highlighter/dist/cjs/styles/prism/dracula";
 
 import { SEO } from "@/src/components/SEO";
-import { getPostBySlug, getPostsSlugs } from "@/utils/posts";
+import { Frontmatter, getPostBySlug, getPostsSlugs, Post } from "@/utils/posts";
+import { GetStaticPaths, GetStaticProps } from "next";
 
-export default function Post({ post, frontmatter, nextPost, previousPost }) {
+type Props = {
+  post: Partial<Post>;
+  frontmatter: Frontmatter;
+  nextPost: Post;
+  previousPost: Post;
+};
+
+export default function BlogPage({ post, frontmatter, nextPost, previousPost }: Props): JSX.Element {
   return (
     <>
       <SEO
@@ -51,7 +59,7 @@ export default function Post({ post, frontmatter, nextPost, previousPost }) {
   );
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getPostsSlugs();
 
   return {
@@ -60,8 +68,8 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params: { slug } }) {
-  const postData = getPostBySlug(slug);
+export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
+  const postData = getPostBySlug(slug as string);
 
   if (!postData.previousPost) {
     postData.previousPost = null;

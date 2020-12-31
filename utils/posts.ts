@@ -1,7 +1,38 @@
 import matter from "gray-matter";
 import fs from "fs";
 
-export function getPostsFolders() {
+export type Frontmatter = {
+  date?: string;
+  title?: string;
+  description?: string;
+};
+
+type PostFolder = {
+  directory: string;
+  filename: string;
+};
+
+export type Post = {
+  slug: string;
+  frontmatter: Frontmatter;
+  excerpt: string;
+  content: string;
+};
+
+type PostSlug = {
+  params: {
+    slug: string;
+  }
+};
+
+type PostInfo = {
+  post: Partial<Post>;
+  previousPost: Post;
+  nextPost: Post;
+  frontmatter: Frontmatter;
+};
+
+export function getPostsFolders(): Array<PostFolder> {
   // Get all posts folders located in `content/posts`
   const postsFolders = fs
     .readdirSync(`${process.cwd()}/content/posts`)
@@ -21,7 +52,7 @@ function getFormattedDate(date: Date) {
   return formattedDate;
 }
 
-export function getSortedPosts() {
+export function getSortedPosts(): Array<Post> {
   const postFolders = getPostsFolders();
 
   const posts = postFolders
@@ -56,7 +87,7 @@ export function getSortedPosts() {
   return posts;
 }
 
-export function getPostsSlugs() {
+export function getPostsSlugs(): Array<PostSlug> {
   const postFolders = getPostsFolders();
 
   const paths = postFolders.map(({ filename }) => ({
@@ -68,7 +99,7 @@ export function getPostsSlugs() {
   return paths;
 }
 
-export function getPostBySlug(slug) {
+export function getPostBySlug(slug: string): PostInfo {
   const posts = getSortedPosts();
 
   const postIndex = posts.findIndex(({ slug: postSlug }) => postSlug === slug);

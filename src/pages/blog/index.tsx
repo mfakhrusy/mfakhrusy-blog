@@ -1,9 +1,14 @@
 import Link from "next/link";
 
 import { SEO } from "@/src/components/SEO";
-import { getSortedPosts } from "@/utils/posts";
+import { getSortedPosts, Post } from "@/utils/posts";
+import { GetStaticProps } from "next";
 
-export default function Home({ posts }) {
+type Props = {
+  posts: Array<Post>
+}
+
+export default function Home({ posts }: Props): JSX.Element {
   return (
     <>
       <SEO title="All posts" />
@@ -28,7 +33,7 @@ export default function Home({ posts }) {
   );
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const posts = getSortedPosts();
 
   return {

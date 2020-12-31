@@ -1,12 +1,13 @@
+import { AppProps } from "next/dist/next-server/lib/router/router";
 import Head from "next/head";
 
-export default function MyApp({Component, pageProps}) {
+export default function MyApp({Component, pageProps}: AppProps): JSX.Element {
   return (
     <>
-    <Head>
-      <link rel="shortcut icon" href="/favicon.ico?v=2" />
-    </Head>
-    <Component {...pageProps} />
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico?v=2" />
+      </Head>
+      <Component {...pageProps} />
     </>
   )
-};
+}
