@@ -1,21 +1,39 @@
-import Head from 'next/head';
-import { attributes, react as HomeContent } from 'content/home.md';
-import { Test } from 'src/components/Test';
+import Link from "next/link";
 
-function Home() {
-  const { title, authors } = attributes;
+import { SEO } from "@/src/components/SEO";
+import { getSortedPosts } from "@/utils/posts";
+
+export default function Home({ posts }) {
   return (
-  <>
-    <Head>
-      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    </Head>
-    <article>
-      <h1>{title}</h1>
-      <HomeContent />
-      <Test />
-    </article>
-  </>
-  )
-};
+    <>
+      <SEO title="All posts" />
+      {posts.map(({ frontmatter: { title, description, date }, slug }) => (
+        <article key={slug}>
+          <header className="mb-2">
+            <h3 className="mb-2">
+              <Link href={"/blog/[slug]"} as={`/blog/${slug}`}>
+                <a className="text-4xl font-bold text-yellow-600 font-display">
+                  {title}
+                </a>
+              </Link>
+            </h3>
+            <span className="text-sm">{date}</span>
+          </header>
+          <section>
+            <p className="mb-8 text-lg">{description}</p>
+          </section>
+        </article>
+      ))}
+    </>
+  );
+}
 
-export default Home;
+export async function getStaticProps() {
+  const posts = getSortedPosts();
+
+  return {
+    props: {
+      posts,
+    },
+  };
+}
