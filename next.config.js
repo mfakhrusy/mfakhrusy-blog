@@ -1,13 +1,11 @@
 module.exports = {
-  webpack: (config) => {
-    config.module.rules.push(
+  async redirects() {
+    return [
       {
-        test: /\.md$/,
-        loader: 'frontmatter-markdown-loader',
-        options: { mode: ['react-component'] }
+        source: '/',
+        destination: '/blog',
+        permanent: true,
       }
-    )
-
-    return config;
+    ]
   }
 }
