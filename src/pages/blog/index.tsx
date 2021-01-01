@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SEO } from "@/src/components/SEO";
 import { getSortedPosts, Post } from "@/utils/posts";
 import { GetStaticProps } from "next";
+import { Flex } from "@chakra-ui/react";
 
 type Props = {
   posts: Array<Post>;
@@ -12,6 +13,7 @@ export default function Home({ posts }: Props): JSX.Element {
   return (
     <>
       <SEO title="All posts" />
+      <Flex flexDirection="column">
       {posts.map(({ frontmatter: { title, description, date }, slug }) => (
         <article key={slug}>
           <header>
@@ -27,6 +29,7 @@ export default function Home({ posts }: Props): JSX.Element {
           </section>
         </article>
       ))}
+      </Flex>
     </>
   );
 }
