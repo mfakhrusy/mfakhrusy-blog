@@ -27,9 +27,8 @@ Will I keep writing ?
 
 Is Science different than Math ?
 
-
 1. No, or Maybe, or Yes, or a state between those 3,
-2. extremely improbable, but I don't know, 
+2. extremely improbable, but I don't know,
 3. that seems like a good idea,
 4. it's not for me to judge,
 5. I bloody hope so.
@@ -46,6 +45,6 @@ and for either one, I just hope that this post is a great summary (or introducti
 
 ## Apologize in advance
 
-I'm not a native english speaker, so pardon me if I make some silly grammar mistakes or wrong word usage. 
+I'm not a native english speaker, so pardon me if I make some silly grammar mistakes or wrong word usage.
 
 If you have something to fix or improve in the language side of the blog, I'm very eager to know and you can reach me on many platforms that I wrote in the site's footer, or [my email](mailto:fakhrusy.m@gmail.com) even if it's just a nitpick since I am an all-rounder wannabe, and that include linguistic!

@@ -1,9 +1,7 @@
-const withPlugins = require('next-compose-plugins');
-const optimizedImages = require('next-optimized-images');
+import withPlugins from "next-compose-plugins";
+import optimizedImagesPlugin from "next-optimized-images";
 
-module.exports = withPlugins([
-[optimizedImages, {}]
-],{
+module.exports = withPlugins([[optimizedImagesPlugin, {}]], {
   async redirects() {
     return [
       {
@@ -12,17 +10,5 @@ module.exports = withPlugins([
         permanent: true,
       },
     ];
-  },}
-  )
-
-// module.exports = {
-//   async redirects() {
-//     return [
-//       {
-//         source: "/",
-//         destination: "/blog",
-//         permanent: true,
-//       },
-//     ];
-//   },
-// };
+  },
+});

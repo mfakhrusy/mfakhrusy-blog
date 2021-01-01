@@ -5,5 +5,5 @@ export function Header() {
     <Flex>
       <Image src="/assets/butterfly.svg" height="30px" width="30px" />
     </Flex>
-  )
-};
+  );
+}

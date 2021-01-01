@@ -5,7 +5,7 @@ import { getSiteMetaData } from "@/utils/helpers";
 type Props = {
   title: string;
   description?: string;
-}
+};
 
 export function SEO({ title, description = "" }: Props) {
   const siteMetadata = getSiteMetaData();

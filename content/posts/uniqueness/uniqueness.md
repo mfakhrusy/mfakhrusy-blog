@@ -8,6 +8,7 @@ thumbnail: butterfly_in_solitude.jpg
 ---
 
 version:
+
 - 0.0.1 - 2020-07-16
 
 ## This is a work in progress, will be updated AND edited regularly
@@ -43,13 +44,13 @@ Can I divide the whole population into two?
 
 From my own experience, the former tend to talk so much about themselves being unique, different, and not belong to this world that I feel sick about it. (hey, I was happened to have that kind of phase too you know, so I understand them, kind of, and I am sick of being like that, so I stopped)
 
-Or maybe there's a guy who force themselves into a uniqueness by deliberately show people that they, in fact, an introvert. Although in real life they lay between the "edge side of a not-so introverted person", if I take the standard that introverted means "like to be alone". 
+Or maybe there's a guy who force themselves into a uniqueness by deliberately show people that they, in fact, an introvert. Although in real life they lay between the "edge side of a not-so introverted person", if I take the standard that introverted means "like to be alone".
 
 However, if I take the perceived definition on MBTIs introverted type of "charge their energy by being alone", I might be wrong and everyone can actually say themselves introverted because, hey, sleeping is mostly be done alone, right? and it charges you, right? Even if you're married, you still sleep as a solitude entity, alone, you don't share the sleeping state between partners.
 
 =================
 
-Will be continued later, after I read some books, maybe. 
+Will be continued later, after I read some books, maybe.
 
 I want to delve into this, I really do, I actually just realized that I love psychology, so I want to read and write more about this science (yep, science!).
 

@@ -34,7 +34,7 @@ thumbnail: start-now.jpg
 25. inconsequential - not important or significant.
 26. grabble - to search with the hand
 27. pier - a platform supported on pillars or girders leading out from the shore into a body of water, used as a landing stage for boats.
-[pier](http://t2.gstatic.com/images?q=tbn:ANd9GcSMHCXVtOTbUXveexH2Ejg233n92Yj5Fy5u0mfi6PHUMHaJEkf8cncEwh2QwyCNAjPs2hhw_k0xRAgZh_mV8AA)
+    [pier](http://t2.gstatic.com/images?q=tbn:ANd9GcSMHCXVtOTbUXveexH2Ejg233n92Yj5Fy5u0mfi6PHUMHaJEkf8cncEwh2QwyCNAjPs2hhw_k0xRAgZh_mV8AA)
 28. sellsword - a mercenary
 29. frumpy - (of a woman or her clothes) dowdy and old-fashioned.
 30. dowdy - (of a person or their clothes) unfashionable and without style in appearance (typically used of a woman).
@@ -42,20 +42,20 @@ thumbnail: start-now.jpg
 32. mutton - the flesh of sheep, especially mature sheep, used as food.
 33. lousy - (informal) very poor or bad; disgusting. infested with lice.
 34. satchel - a bag carried on the shoulder by a long strap and typically closed by a flap.
-[satchel](http://t3.gstatic.com/images?q=tbn:ANd9GcSgSpqmqbuXxq19CSsu5WCDMVYo_Onbn61M51pZjqp_9x20n9BP49NcjL2-G3VOLh2C8NUG7-xIZ-PXy3UJcas)
+    [satchel](http://t3.gstatic.com/images?q=tbn:ANd9GcSgSpqmqbuXxq19CSsu5WCDMVYo_Onbn61M51pZjqp_9x20n9BP49NcjL2-G3VOLh2C8NUG7-xIZ-PXy3UJcas)
 35. pareo - a kind of sarong made of a single straight piece of printed cotton cloth, worn by Polynesians.
 36. betwixt - archaic term for between. (short form: `Twixt)
 37. canny - having or showing shrewdness and good judgment, especially in money or business matters.
-38. mummery - (general adj) ridiculous, hypocritical 
+38. mummery - (general adj) ridiculous, hypocritical
 39. squabble - quarrel noisily over a trivial matter. fighting among themselves
-30. exacerbate - make (a problem, bad situation, or negative feeling) worse.
-31. colloquial - used in or characteristic of familiar and informal conversation (indonesian: bahasa gaul)
-32. solecism - a grammatical mistake in speech or writing.
-33. ignominy - Ignominy is a noun meaning great public shame, disgrace, or embarrassment, or a situation or event that causes this
-34. pertinent - Something pertinent is relevant and on-point
-35. zealot - a fervent and even militant proponent of something
-36. cathartic - A movie, play, or song that makes you cry is called cathartic
-37. codedependency - Codependency is a behavioral condition in a relationship where one person enables another person's addiction, poor mental health, immaturity, irresponsibility, or under-achievement
-38. envisage - contemplate or conceive of as a possibility or a diserable future event
-39. appertain to - relate to; concern
-40. appertain - be appropriate or applicable
+40. exacerbate - make (a problem, bad situation, or negative feeling) worse.
+41. colloquial - used in or characteristic of familiar and informal conversation (indonesian: bahasa gaul)
+42. solecism - a grammatical mistake in speech or writing.
+43. ignominy - Ignominy is a noun meaning great public shame, disgrace, or embarrassment, or a situation or event that causes this
+44. pertinent - Something pertinent is relevant and on-point
+45. zealot - a fervent and even militant proponent of something
+46. cathartic - A movie, play, or song that makes you cry is called cathartic
+47. codedependency - Codependency is a behavioral condition in a relationship where one person enables another person's addiction, poor mental health, immaturity, irresponsibility, or under-achievement
+48. envisage - contemplate or conceive of as a possibility or a diserable future event
+49. appertain to - relate to; concern
+50. appertain - be appropriate or applicable

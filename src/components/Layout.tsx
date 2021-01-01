@@ -2,7 +2,7 @@ import { Flex } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
 import { Header } from "./Header";
 
-export function Layout({children}: PropsWithChildren<{}>) {
+export function Layout({ children }: PropsWithChildren<{}>) {
   return (
     <Flex
       fontFamily="Roboto"
@@ -12,10 +12,8 @@ export function Layout({children}: PropsWithChildren<{}>) {
     >
       <Flex width="1200px" flexDirection="column">
         <Header />
-        <Flex>
-          {children}
-        </Flex>
+        <Flex>{children}</Flex>
       </Flex>
     </Flex>
-  )
-};
+  );
+}
