@@ -1,6 +1,7 @@
 import { Post } from "@/utils/posts";
 import { Flex } from "@chakra-ui/react";
 import Link from "next/link";
+import { PostThumbnail } from "./PostThumbnail";
 
 type Props = {
   posts: Array<Post>;
@@ -24,11 +25,12 @@ export function AllPostsView({ posts }: Props) {
               <p>{description}</p>
             </section>
             {thumbnail && (
-              <section>
-                <img
-                  src={require(`../../../content/posts/${slug}/images/${thumbnail}`)}
-                />
-              </section>
+              <PostThumbnail slug={slug} fileName={thumbnail} />
+              // <section>
+              //   <img
+              //     src={require(`../../../content/posts/${slug}/images/${thumbnail}`)}
+              //   />
+              // </section>
             )}
           </article>
         )

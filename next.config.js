@@ -1,7 +1,8 @@
-import withPlugins from "next-compose-plugins";
-import optimizedImagesPlugin from "next-optimized-images";
+/* eslint-disable @typescript-eslint/no-var-requires */
+const withPlugins = require('next-compose-plugins');
+const optimizedImages = require('next-optimized-images');
 
-module.exports = withPlugins([[optimizedImagesPlugin, {}]], {
+module.exports = withPlugins([[optimizedImages, {}]], {
   async redirects() {
     return [
       {
