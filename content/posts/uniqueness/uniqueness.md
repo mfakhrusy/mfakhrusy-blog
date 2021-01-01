@@ -4,7 +4,7 @@ author: Muhamad Fakhrusy
 date: 2020-07-16T00:00:00.0Z
 excerpt: >-
   A self-discourse about uniqueness, traits, quirks, and personality.
-hero: images/butterfly_in_solitude.jpg
+thumbnail: butterfly_in_solitude.jpg
 ---
 
 version:

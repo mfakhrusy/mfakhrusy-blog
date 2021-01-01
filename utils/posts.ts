@@ -5,6 +5,7 @@ export type Frontmatter = {
   date?: string;
   title?: string;
   description?: string;
+  thumbnail?: string;
 };
 
 type PostFolder = {
@@ -64,6 +65,8 @@ export function getSortedPosts(): Array<Post> {
 
       // Parse markdown, get frontmatter data, excerpt and content.
       const { data, excerpt, content } = matter(markdownWithMetadata);
+
+      // console.log(data.thumbnail)
 
       const frontmatter = {
         ...data,

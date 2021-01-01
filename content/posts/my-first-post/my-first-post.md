@@ -4,7 +4,7 @@ author: Muhamad Fakhrusy
 date: 2020-07-13T00:00:00.0Z
 excerpt: >-
   My First Post, as I need to pass on the tradition, is a hello world post.
-hero: images/code background.jpg
+thumbnail: code_background.jpg
 ---
 javascript:
 

@@ -4,7 +4,7 @@ author: Muhamad Fakhrusy
 date: 2020-07-16T00:00:00.0Z
 excerpt: >-
   Just another to-do list that I can't (won't) actually finish
-hero: images/notebook.jpg
+thumbnail: notebook.jpg
 ---
 
 ## Declaration

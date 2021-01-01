@@ -4,7 +4,7 @@ author: Muhamad Fakhrusy
 date: 2020-07-16T00:00:00.0Z
 excerpt: >-
   Weird words!
-hero: images/start-now.jpg
+thumbnail: start-now.jpg
 ---
 
 1. lass - young girl
