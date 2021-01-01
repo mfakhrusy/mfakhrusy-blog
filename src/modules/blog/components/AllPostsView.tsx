@@ -1,5 +1,5 @@
 import { Post } from "@/utils/posts";
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { PostThumbnail } from "./PostThumbnail";
 
@@ -12,27 +12,22 @@ export function AllPostsView({ posts }: Props) {
     <Flex flexDirection="column">
       {posts.map(
         ({ frontmatter: { title, description, date, thumbnail }, slug }) => (
-          <article key={slug}>
-            <header>
-              <h3>
+          <Box as="article" key={slug}>
+            <Box as="header">
+              <Text as="h3">
                 <Link href={"/blog/[slug]"} as={`/blog/${slug}`}>
-                  <a>{title}</a>
+                  {title}
                 </Link>
-              </h3>
-              <span>{date}</span>
-            </header>
-            <section>
-              <p>{description}</p>
-            </section>
+              </Text>
+              <Box as="span">{date}</Box>
+            </Box>
+            <Box as="section">
+              <Text>{description}</Text>
+            </Box>
             {thumbnail && (
               <PostThumbnail slug={slug} fileName={thumbnail} />
-              // <section>
-              //   <img
-              //     src={require(`../../../content/posts/${slug}/images/${thumbnail}`)}
-              //   />
-              // </section>
             )}
-          </article>
+          </Box>
         )
       )}
     </Flex>
