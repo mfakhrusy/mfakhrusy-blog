@@ -22,7 +22,7 @@ export type Post = {
 type PostSlug = {
   params: {
     slug: string;
-  }
+  };
 };
 
 type PostInfo = {
@@ -81,7 +81,9 @@ export function getSortedPosts(): Array<Post> {
       };
     })
     .sort(
-      (a, b) => (new Date(b.frontmatter.date) as any) - (new Date(a.frontmatter.date) as any)
+      (a, b) =>
+        (new Date(b.frontmatter.date) as any) -
+        (new Date(a.frontmatter.date) as any)
     );
 
   return posts;

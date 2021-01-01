@@ -2,7 +2,12 @@ import Head from "next/head";
 
 import { getSiteMetaData } from "@/utils/helpers";
 
-export function SEO({ title, description = "" }) {
+type Props = {
+  title: string;
+  description?: string;
+}
+
+export function SEO({ title, description = "" }: Props) {
   const siteMetadata = getSiteMetaData();
 
   const metaDescription = description || siteMetadata.description;

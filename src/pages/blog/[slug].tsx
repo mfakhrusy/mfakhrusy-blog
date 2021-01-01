@@ -14,7 +14,12 @@ type Props = {
   previousPost: Post;
 };
 
-export default function BlogPage({ post, frontmatter, nextPost, previousPost }: Props): JSX.Element {
+export default function BlogPage({
+  post,
+  frontmatter,
+  nextPost,
+  previousPost,
+}: Props): JSX.Element {
   return (
     <>
       <SEO
@@ -24,9 +29,7 @@ export default function BlogPage({ post, frontmatter, nextPost, previousPost }: 
 
       <article>
         <header>
-          <h1>
-            {frontmatter.title}
-          </h1>
+          <h1>{frontmatter.title}</h1>
           <p>{frontmatter.date}</p>
         </header>
         <ReactMarkdown
@@ -39,9 +42,7 @@ export default function BlogPage({ post, frontmatter, nextPost, previousPost }: 
       <nav>
         {previousPost ? (
           <Link href={"/blog/[slug]"} as={`/blog/${previousPost.slug}`}>
-            <a>
-              ← {previousPost.frontmatter.title}
-            </a>
+            <a>← {previousPost.frontmatter.title}</a>
           </Link>
         ) : (
           <div />
@@ -65,7 +66,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths,
     fallback: false,
   };
-}
+};
 
 export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
   const postData = getPostBySlug(slug as string);
@@ -79,7 +80,7 @@ export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
   }
 
   return { props: postData };
-}
+};
 
 const CodeBlock = ({ language, value }) => {
   return (

@@ -5,8 +5,8 @@ import { getSortedPosts, Post } from "@/utils/posts";
 import { GetStaticProps } from "next";
 
 type Props = {
-  posts: Array<Post>
-}
+  posts: Array<Post>;
+};
 
 export default function Home({ posts }: Props): JSX.Element {
   return (
@@ -17,9 +17,7 @@ export default function Home({ posts }: Props): JSX.Element {
           <header>
             <h3>
               <Link href={"/blog/[slug]"} as={`/blog/${slug}`}>
-                <a>
-                  {title}
-                </a>
+                <a>{title}</a>
               </Link>
             </h3>
             <span>{date}</span>
@@ -41,4 +39,4 @@ export const getStaticProps: GetStaticProps = async () => {
       posts,
     },
   };
-}
+};
