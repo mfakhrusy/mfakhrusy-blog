@@ -6,6 +6,7 @@ export type Frontmatter = {
   title?: string;
   description?: string;
   thumbnail?: string;
+  excerpt?: string;
 };
 
 type PostFolder = {

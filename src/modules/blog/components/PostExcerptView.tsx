@@ -30,7 +30,7 @@ export default function PostExcerptView({
   frontmatter,
   slug,
 }: Props): JSX.Element {
-  const { title, description, thumbnail, date } = frontmatter;
+  const { title, description, thumbnail, date, excerpt } = frontmatter;
 
   const router = useRouter();
 
@@ -43,7 +43,8 @@ export default function PostExcerptView({
       onClick={() => router.push(`/blog/${slug}`)}
     >
       <PostThumbnail slug={slug} fileName={thumbnail} />
-      <Flex flexDirection="column" marginLeft="50px" maxWidth="600px">
+      <Spacer width="50px" />
+      <Flex flexDirection="column" maxWidth="600px">
         <Box as="header">
           <Heading
             as="h2"
@@ -58,6 +59,10 @@ export default function PostExcerptView({
         </Box>
         <Box as="section">
           <Text>{description}</Text>
+        </Box>
+      <Spacer height="10px" />
+        <Box as="section">
+          <Text>{excerpt}</Text>
         </Box>
       </Flex>
     </Container>
