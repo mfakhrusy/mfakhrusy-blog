@@ -1,6 +1,9 @@
+import { ChakraProvider } from "@chakra-ui/react";
 import { AppProps } from "next/dist/next-server/lib/router/router";
 import Head from "next/head";
+
 import { Layout } from "../components/Layout";
+import { chakraTheme } from "../lib/theme/chakraTheme";
 
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
@@ -8,9 +11,11 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       <Head>
         <link rel="shortcut icon" href="/favicon.ico?v=2" />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <ChakraProvider theme={chakraTheme}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ChakraProvider>
     </>
   );
 }

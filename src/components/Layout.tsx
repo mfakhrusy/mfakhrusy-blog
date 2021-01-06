@@ -2,9 +2,11 @@ import { Flex } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
 import { Header } from "./Header";
 
-export function Layout({ children }: PropsWithChildren<{}>) {
+// eslint-disable-next-line @typescript-eslint/ban-types
+export function Layout({ children }: PropsWithChildren<{}>): JSX.Element {
   return (
     <Flex
+      backgroundColor="gray.50"
       fontFamily="Roboto"
       alignItems="center"
       justifyContent="center"
