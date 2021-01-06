@@ -1,15 +1,15 @@
 {
   "siteMetadata": {
-    "title": "Next.js Starter Blog",
+    "title": "mfakhrusy Blog",
     "author": {
-      "name": "Jose Felix",
-      "summary": "who works building clean user interfaces with React."
+      "name": "Muhamad Fakhrusy",
+      "summary": "who loves science, space, math, software building, and other myriad of things."
     },
-    "description": "A blog created with Next.js and Tailwind.css",
-    "siteUrl": "https://nextjs-starter-blog-demo.netlify.app/",
+    "description": "A blog created with love, for what its worth",
+    "siteUrl": "https://fakhrusy.com/",
     "language": "en-US",
     "social": {
-      "twitter": "Jose_R_Felix"
+      "twitter": "f_fakhrusy"
     }
   }
 }
