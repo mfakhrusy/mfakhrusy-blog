@@ -60,7 +60,7 @@ export default function PostExcerptView({
         <Box as="section">
           <Text>{description}</Text>
         </Box>
-      <Spacer height="10px" />
+        <Spacer height="10px" />
         <Box as="section">
           <Text>{excerpt}</Text>
         </Box>

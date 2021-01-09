@@ -7,6 +7,7 @@ export type Frontmatter = {
   description?: string;
   thumbnail?: string;
   excerpt?: string;
+  status?: "active" | "inactive";
 };
 
 type PostFolder = {

@@ -9,9 +9,11 @@ type Props = {
 export function AllPostsView({ posts }: Props): JSX.Element {
   return (
     <Flex flexDirection="column">
-      {posts.map(({ frontmatter, slug }) => (
-        <PostExcerptView frontmatter={frontmatter} slug={slug} />
-      ))}
+      {posts
+        .filter(({ frontmatter: { status } }) => status === "active")
+        .map(({ frontmatter, slug }) => (
+          <PostExcerptView frontmatter={frontmatter} slug={slug} />
+        ))}
     </Flex>
   );
 }
