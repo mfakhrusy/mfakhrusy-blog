@@ -1,11 +1,10 @@
 import Link from "next/link";
-import ReactMarkdown from "react-markdown/with-html";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import style from "react-syntax-highlighter/dist/cjs/styles/prism/dracula";
-
 import { SEO } from "@/src/components/SEO";
 import { Frontmatter, getPostBySlug, getPostsSlugs, Post } from "@/utils/posts";
 import { GetStaticPaths, GetStaticProps } from "next";
+import { Flex, Heading, Text } from "@chakra-ui/react";
+import { Spacer } from "@/src/components/Spacer";
+import { MarkdownRenderer } from "@/src/modules/markdownRenderer";
 
 type Props = {
   post: Partial<Post>;
@@ -27,17 +26,16 @@ export default function BlogPage({
         description={frontmatter.description || post.excerpt}
       />
 
-      <article>
-        <header>
-          <h1>{frontmatter.title}</h1>
-          <p>{frontmatter.date}</p>
-        </header>
-        <ReactMarkdown
-          escapeHtml={false}
-          source={post.content}
-          renderers={{ code: CodeBlock }}
-        />
-      </article>
+      <Flex as="article" flexDirection="column">
+        <Flex as="header" flexDirection="column">
+          <Heading size="md" marginBottom="10px">
+            {frontmatter.title}
+          </Heading>
+          <Text as="small">{frontmatter.date}</Text>
+        </Flex>
+        <Spacer height="20px" />
+        <MarkdownRenderer content={post.content} />
+      </Flex>
 
       <nav>
         {previousPost ? (
@@ -80,12 +78,4 @@ export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
   }
 
   return { props: postData };
-};
-
-const CodeBlock = ({ language, value }) => {
-  return (
-    <SyntaxHighlighter style={style} language={language}>
-      {value}
-    </SyntaxHighlighter>
-  );
 };
