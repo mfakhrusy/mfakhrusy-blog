@@ -6,11 +6,19 @@ type Props = {
   posts: Array<Post>;
 };
 
+const isDevelopment = process.env.NEXT_PUBLIC_NODE_ENV === 'development';
+
 export function AllPostsView({ posts }: Props): JSX.Element {
   return (
     <Flex flexDirection="column">
       {posts
-        .filter(({ frontmatter: { status } }) => status === "active")
+        .filter(({ frontmatter: { status } }) => {
+          if (isDevelopment) {
+            return status === 'draft' || status === 'active'
+          } else {
+            return status === 'active'
+          }
+        })
         .map(({ frontmatter, slug }) => (
           <PostExcerptView frontmatter={frontmatter} slug={slug} />
         ))}
