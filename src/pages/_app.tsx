@@ -2,7 +2,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { AppProps } from "next/dist/next-server/lib/router/router";
 import Head from "next/head";
 
-import { Layout } from "../components/Layout";
+import { Layout } from "@/src/modules/layout";
 import { chakraTheme } from "../lib/theme/chakraTheme";
 
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {

@@ -1,9 +1,9 @@
-import { Frontmatter, Post } from "@/utils/posts";
 import { Flex, Heading, Text } from "@chakra-ui/react";
+import { Frontmatter, Post } from "@/utils/posts";
 import { Spacer } from "@/src/components/Spacer";
-import { PostThumbnail } from "./PostThumbnail";
 import { MarkdownRenderer } from "@/src/modules/markdownRenderer";
-import Link from "next/link";
+import { PostThumbnail } from "./PostThumbnail";
+import { PostNavigationView } from "./PostNavigationView";
 
 type Props = {
   frontmatter: Frontmatter;
@@ -34,21 +34,12 @@ export function PostView({
           size="large"
         />
         <Spacer height="30px" />
-        <MarkdownRenderer content={post.content} />
+        <Flex>
+          <MarkdownRenderer content={post.content} />
+        </Flex>
       </Flex>
-
-      <Flex as="nav" flexDirection="column">
-        {previousPost && (
-          <Link href={"/blog/[slug]"} as={`/blog/${previousPost.slug}`}>
-            <a>← {previousPost.frontmatter.title}</a>
-          </Link>
-        )}
-        {nextPost && (
-          <Link href={"/blog/[slug]"} as={`/blog/${nextPost.slug}`}>
-            <a>{nextPost.frontmatter.title} →</a>
-          </Link>
-        )}
-      </Flex>
+      <Spacer height="30px" />
+      <PostNavigationView previousPost={previousPost} nextPost={nextPost} />
     </Flex>
   );
 }

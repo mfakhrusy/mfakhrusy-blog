@@ -1,6 +1,6 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
-import { Spacer } from "./Spacer";
 import { useRouter } from "next/router";
+import { Flex, Image, Text } from "@chakra-ui/react";
+import { Spacer } from "@/src/components/Spacer";
 
 export function Header(): JSX.Element {
   const router = useRouter();
