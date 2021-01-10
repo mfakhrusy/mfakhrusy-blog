@@ -1,13 +1,10 @@
-import Link from "next/link";
-import { SEO } from "@/src/components/SEO";
-import { Frontmatter, getPostBySlug, getPostsSlugs, Post } from "@/utils/posts";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { Flex, Heading, Text } from "@chakra-ui/react";
-import { Spacer } from "@/src/components/Spacer";
-import { MarkdownRenderer } from "@/src/modules/markdownRenderer";
+import { SEO } from "@/src/components/SEO";
+import { PostView } from "@/src/modules/blog/components/PostView";
+import { Frontmatter, getPostBySlug, getPostsSlugs, Post } from "@/utils/posts";
 
 type Props = {
-  post: Partial<Post>;
+  post: Post;
   frontmatter: Frontmatter;
   nextPost: Post;
   previousPost: Post;
@@ -26,33 +23,12 @@ export default function BlogPage({
         description={frontmatter.description || post.excerpt}
       />
 
-      <Flex as="article" flexDirection="column">
-        <Flex as="header" flexDirection="column">
-          <Heading size="md" marginBottom="10px">
-            {frontmatter.title}
-          </Heading>
-          <Text as="small">{frontmatter.date}</Text>
-        </Flex>
-        <Spacer height="20px" />
-        <MarkdownRenderer content={post.content} />
-      </Flex>
-
-      <nav>
-        {previousPost ? (
-          <Link href={"/blog/[slug]"} as={`/blog/${previousPost.slug}`}>
-            <a>← {previousPost.frontmatter.title}</a>
-          </Link>
-        ) : (
-          <div />
-        )}
-        {nextPost ? (
-          <Link href={"/blog/[slug]"} as={`/blog/${nextPost.slug}`}>
-            <a>{nextPost.frontmatter.title} →</a>
-          </Link>
-        ) : (
-          <div />
-        )}
-      </nav>
+      <PostView
+        post={post}
+        previousPost={previousPost}
+        nextPost={nextPost}
+        frontmatter={frontmatter}
+      />
     </>
   );
 }

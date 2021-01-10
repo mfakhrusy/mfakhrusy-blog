@@ -1,6 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "./CodeBlock";
-import { MarkdownHeading } from './MarkdownHeading';
+import { MarkdownHeading } from "./MarkdownHeading";
 
 type Props = {
   content: string;

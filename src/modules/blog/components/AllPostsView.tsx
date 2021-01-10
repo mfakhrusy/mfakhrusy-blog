@@ -6,7 +6,7 @@ type Props = {
   posts: Array<Post>;
 };
 
-const isDevelopment = process.env.NEXT_PUBLIC_NODE_ENV === 'development';
+const isDevelopment = process.env.NEXT_PUBLIC_NODE_ENV === "development";
 
 export function AllPostsView({ posts }: Props): JSX.Element {
   return (
@@ -14,13 +14,13 @@ export function AllPostsView({ posts }: Props): JSX.Element {
       {posts
         .filter(({ frontmatter: { status } }) => {
           if (isDevelopment) {
-            return status === 'draft' || status === 'active'
+            return status === "draft" || status === "active";
           } else {
-            return status === 'active'
+            return status === "active";
           }
         })
-        .map(({ frontmatter, slug }) => (
-          <PostExcerptView frontmatter={frontmatter} slug={slug} />
+        .map(({ frontmatter, slug }, index) => (
+          <PostExcerptView frontmatter={frontmatter} slug={slug} key={index} />
         ))}
     </Flex>
   );

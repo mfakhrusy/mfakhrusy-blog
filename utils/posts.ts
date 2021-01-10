@@ -68,8 +68,6 @@ export function getSortedPosts(): Array<Post> {
       // Parse markdown, get frontmatter data, excerpt and content.
       const { data, excerpt, content } = matter(markdownWithMetadata);
 
-      // console.log(data.thumbnail)
-
       const frontmatter = {
         ...data,
         date: getFormattedDate(data.date),
@@ -116,5 +114,10 @@ export function getPostBySlug(slug: string): PostInfo {
   const previousPost = posts[postIndex + 1];
   const nextPost = posts[postIndex - 1];
 
-  return { frontmatter, post: { content, excerpt }, previousPost, nextPost };
+  return {
+    frontmatter,
+    post: { content, excerpt, slug },
+    previousPost,
+    nextPost,
+  };
 }
