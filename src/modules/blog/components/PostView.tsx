@@ -34,9 +34,7 @@ export function PostView({
           size="large"
         />
         <Spacer height="30px" />
-        <Flex>
-          <MarkdownRenderer content={post.content} />
-        </Flex>
+        <MarkdownRenderer content={post.content} />
       </Flex>
       <Spacer height="30px" />
       <PostNavigationView previousPost={previousPost} nextPost={nextPost} />

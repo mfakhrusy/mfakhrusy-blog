@@ -17,10 +17,13 @@ export function PostThumbnail({
     <Flex
       className="post-thumbnail-wrapper"
       as="section"
-      width={size === "small" ? "500px" : "800px"}
+      width={size === "small" ? "300px" : "800px"}
       height={size === "small" ? "200px" : "400px"}
-      boxShadow="rgba(0, 0, 0, 0.3) 0px 30px 60px -10px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px"
-      transition="0.3s cubic-bezier(0.5, 1, 0.89, 1)"
+      boxShadow={{
+        lg:
+          "rgba(0, 0, 0, 0.3) 0px 30px 60px -10px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px",
+      }}
+      transition={{ lg: "0.3s cubic-bezier(0.5, 1, 0.89, 1)" }}
     >
       <Image
         objectFit="cover"

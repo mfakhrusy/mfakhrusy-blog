@@ -6,17 +6,19 @@ import { PostThumbnail } from "./PostThumbnail";
 import styled from "@emotion/styled";
 
 const Container = styled(Flex)`
-  &:hover {
-    .post-thumbnail-wrapper {
-      transform: translateX(-2px);
-      transition: 0.3s cubic-bezier(0.5, 1, 0.89, 1);
-      box-shadow: rgba(0, 0, 0, 0.42) 2px 30px 60px -10px,
-        rgba(0, 0, 0, 0.33) 0px 18px 36px -18px;
-    }
+  @media only screen and (min-width: 62em) {
+    &:hover {
+      .post-thumbnail-wrapper {
+        transform: translateX(-2px);
+        transition: 0.3s cubic-bezier(0.5, 1, 0.89, 1);
+        box-shadow: rgba(0, 0, 0, 0.42) 2px 30px 60px -10px,
+          rgba(0, 0, 0, 0.33) 0px 18px 36px -18px;
+      }
 
-    .post-title {
-      color: purple;
-      transition: 0.3s cubic-bezier(0.5, 1, 0.89, 1);
+      .post-title {
+        color: purple;
+        transition: 0.3s cubic-bezier(0.5, 1, 0.89, 1);
+      }
     }
   }
 `;
@@ -41,9 +43,24 @@ export default function PostExcerptView({
       marginBottom="60px"
       cursor="pointer"
       onClick={() => router.push(`/blog/${slug}`)}
+      flexDirection={{
+        base: "column",
+        lg: "row",
+      }}
+      boxShadow={{
+        base:
+          "rgba(0, 0, 0, 0.3) 0px 10px 60px -10px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px",
+        lg: "none",
+      }}
+      padding={{ base: "15px", lg: "0" }}
+      marginX={{ base: "15px", lg: "0" }}
+      borderRadius={{ base: "10px", lg: "0" }}
     >
       <PostThumbnail slug={slug} fileName={thumbnail} />
-      <Spacer width="50px" />
+      <Spacer
+        width={{ base: "0", lg: "50px" }}
+        height={{ base: "25px", lg: "0" }}
+      />
       <Flex flexDirection="column" maxWidth="600px">
         <Box as="header">
           <Heading
@@ -54,8 +71,7 @@ export default function PostExcerptView({
           >
             {title}
           </Heading>
-          <Spacer height={4} />
-          <Box as="span">{date}</Box>
+          <Box as="small">{date}</Box>
         </Box>
         <Box as="section">
           <Text>{description}</Text>

@@ -11,6 +11,7 @@ export function Header(): JSX.Element {
       cursor="pointer"
       onClick={() => router.push("/blog")}
       marginBottom="50px"
+      paddingLeft={{ base: "20px", md: "50px" }}
     >
       <Image src="/assets/butterfly.svg" height="30px" width="30px" />
       <Spacer width="20px" />
