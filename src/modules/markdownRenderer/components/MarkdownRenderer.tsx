@@ -8,10 +8,10 @@ import { MarkdownList } from "./MarkdownList";
 import { MarkdownListItem } from "./MarkdownListItem";
 import { MarkdownTable } from "./MarkdownTable";
 import { MarkdownTableCell } from "./MarkdownTableCell";
-import { MarkdownTbody } from "./MarkdownTBody";
-import { MarkdownThead } from "./MarkdownTHead";
+import { MarkdownTbody } from "./MarkdownTbody";
+import { MarkdownThead } from "./MarkdownThead";
 import { MarkdownThematicBreak } from "./MarkdownThematicBreak";
-import { MarkdownTr } from "./MarkdownTR";
+import { MarkdownTr } from "./MarkdownTr";
 
 type Props = {
   content: string;
