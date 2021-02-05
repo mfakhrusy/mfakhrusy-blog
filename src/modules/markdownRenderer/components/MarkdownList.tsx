@@ -7,7 +7,6 @@ type Props = {
 };
 
 export function MarkdownList({ ordered, ...props }: Props): ReactElement {
-  console.log("list", props);
   if (ordered) {
     return <MarkdownOrderedList {...props} />;
   } else {

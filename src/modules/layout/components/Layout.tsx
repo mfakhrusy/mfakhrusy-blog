@@ -14,7 +14,7 @@ export function Layout({ children }: PropsWithChildren<{}>): JSX.Element {
       justifyContent="center"
       paddingTop="50px"
     >
-      <Flex width="1200px" flexDirection="column">
+      <Flex width={{ base: "100vw", lg: "1200px" }} flexDirection="column">
         <Header />
         <Flex>{children}</Flex>
         <Spacer height="20px" />

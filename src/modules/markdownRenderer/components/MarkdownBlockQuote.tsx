@@ -8,6 +8,8 @@ const BlockQuote = styled.blockquote`
   font-size: 17.5px;
 `;
 
-export function MarkdownBlockQuote(props: PropsWithChildren<Record<string, unknown>>): ReactElement {
+export function MarkdownBlockQuote(
+  props: PropsWithChildren<Record<string, unknown>>
+): ReactElement {
   return <BlockQuote>{props.children}</BlockQuote>;
 }

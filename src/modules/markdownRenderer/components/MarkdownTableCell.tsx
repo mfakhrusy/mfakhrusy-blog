@@ -6,7 +6,9 @@ type Props = {
   isHeader: boolean;
 };
 
-export function MarkdownTableCell(props: PropsWithChildren<Props>): ReactElement {
+export function MarkdownTableCell(
+  props: PropsWithChildren<Props>
+): ReactElement {
   if (props.isHeader) {
     return <MarkdownTh>{props.children}</MarkdownTh>;
   } else {

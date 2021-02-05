@@ -5,13 +5,12 @@ type Props = {
   fileName: string;
 };
 
-export function PostThumbnail({ slug, fileName }: Props): JSX.Element {
+export function LargePostThumbnail({ slug, fileName }: Props): JSX.Element {
   return (
     <Flex
       className="post-thumbnail-wrapper"
-      as="section"
-      width={"300px"}
-      height={"200px"}
+      width={{ base: "70%", md: "800px" }}
+      height="auto"
       boxShadow={{
         lg:
           "rgba(0, 0, 0, 0.3) 0px 30px 60px -10px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px",
