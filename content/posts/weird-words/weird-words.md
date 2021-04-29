@@ -5,7 +5,8 @@ date: 2020-07-16T00:00:00.0Z
 excerpt: >-
   Weird words!
 thumbnail: start-now.jpg
-status: active
+status: draft
+category: life
 ---
 
 1. lass - young girl

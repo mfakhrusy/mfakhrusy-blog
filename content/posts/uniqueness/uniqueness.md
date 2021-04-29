@@ -5,7 +5,8 @@ date: 2020-07-16T00:00:00.0Z
 excerpt: >-
   A self-discourse about uniqueness, traits, quirks, and personality.
 thumbnail: butterfly_in_solitude.jpg
-status: active
+status: draft
+category: life
 ---
 
 version:

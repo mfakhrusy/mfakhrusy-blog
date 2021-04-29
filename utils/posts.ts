@@ -1,5 +1,10 @@
 import matter from "gray-matter";
 import fs from "fs";
+import { categories } from "@/utils/postsConstants";
+
+type Status = "active" | "inactive" | "draft";
+
+export type Category = typeof categories[number];
 
 export type Frontmatter = {
   date?: string;
@@ -7,7 +12,8 @@ export type Frontmatter = {
   description?: string;
   thumbnail?: string;
   excerpt?: string;
-  status?: "active" | "inactive" | "draft";
+  status?: Status;
+  category?: Category;
 };
 
 type PostFolder = {
@@ -49,7 +55,11 @@ export function getPostsFolders(): Array<PostFolder> {
 
 // Get day in format: Month day, Year. e.g. April 19, 2020
 function getFormattedDate(date: Date) {
-  const options = { year: "numeric", month: "long", day: "numeric" };
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
   const formattedDate = date.toLocaleDateString("en-US", options);
 
   return formattedDate;
@@ -85,8 +95,8 @@ export function getSortedPosts(): Array<Post> {
     })
     .sort(
       (a, b) =>
-        (new Date(b.frontmatter.date) as any) -
-        (new Date(a.frontmatter.date) as any)
+        new Date(b.frontmatter.date).getTime() -
+        new Date(a.frontmatter.date).getTime()
     );
 
   return posts;

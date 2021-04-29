@@ -1,14 +1,17 @@
-import { Post } from "@/utils/posts";
+import { Category, Post } from "@/utils/posts";
 import { Flex } from "@chakra-ui/react";
 import PostExcerptView from "./PostExcerptView";
 
 type Props = {
   posts: Array<Post>;
+  categoryFilter?: Category;
 };
 
 const isDevelopment = process.env.NEXT_PUBLIC_NODE_ENV === "development";
 
-export function AllPostsView({ posts }: Props): JSX.Element {
+export function AllPostsView({ posts, categoryFilter }: Props): JSX.Element {
+  console.log(categoryFilter);
+
   return (
     <Flex flexDirection="column">
       {posts

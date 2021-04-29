@@ -6,6 +6,7 @@ excerpt: >-
   Journaling your dreams and goals, privately & publicly.
 thumbnail: journal.jpg
 status: draft
+category: life
 ---
 
 2021 has just arrived, and know I get back to write my blog for... like... half a year? ~~lol~~ :tm:

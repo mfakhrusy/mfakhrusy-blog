@@ -5,6 +5,8 @@ import { useRouter } from "next/router";
 import { PostThumbnail } from "./PostThumbnail";
 import styled from "@emotion/styled";
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 const Container = styled(Flex)`
   @media only screen and (min-width: 62em) {
     &:hover {
@@ -38,11 +40,10 @@ export default function PostExcerptView({
 
   return (
     <Container
-      as="article"
       key={slug}
       marginBottom="60px"
       cursor="pointer"
-      onClick={() => router.push(`/blog/${slug}`)}
+      onClick={() => router.push(slug)}
       flexDirection={{
         base: "column",
         lg: "row",
