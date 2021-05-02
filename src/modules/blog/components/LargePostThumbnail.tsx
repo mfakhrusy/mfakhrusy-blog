@@ -13,7 +13,7 @@ export function LargePostThumbnail({ slug, fileName }: Props): JSX.Element {
       height="auto"
       boxShadow={{
         lg:
-          "rgba(0, 0, 0, 0.3) 0px 30px 60px -10px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px",
+          "rgba(0, 0, 0, 0.3) 0px 10px 60px 5px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px",
       }}
       transition={{ lg: "0.3s cubic-bezier(0.5, 1, 0.89, 1)" }}
     >

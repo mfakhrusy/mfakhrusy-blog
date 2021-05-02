@@ -21,10 +21,10 @@ export function AllPostsView({ posts, categoryFilter }: Props): JSX.Element {
           }
         })
         .filter(({ frontmatter: { category } }) => {
-          if (categoryFilter === 'all') {
-            return true
+          if (categoryFilter === "all") {
+            return true;
           } else {
-            return categoryFilter === category
+            return categoryFilter === category;
           }
         })
         .map(({ frontmatter, slug }) => (

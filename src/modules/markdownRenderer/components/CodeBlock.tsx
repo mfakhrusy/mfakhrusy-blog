@@ -7,7 +7,7 @@ type Props = {
 };
 
 export function CodeBlock({ children, className }: Props): JSX.Element {
-  const language = className.split("-")[1];
+  const language = className?.split("-")[1];
   return (
     <SyntaxHighlighter style={style} language={language}>
       {children}

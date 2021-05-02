@@ -6,7 +6,7 @@ type ActiveCategory = Category;
 type CategoryStore = {
   activeCategory: ActiveCategory;
   isCategoryMenuShown: boolean;
-  setActiveCategory: (category: Category) => void;
+  setActiveCategory: (_category: Category) => void;
   toggleCategoryMenu: () => void;
 };
 

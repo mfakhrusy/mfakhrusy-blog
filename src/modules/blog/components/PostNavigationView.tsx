@@ -12,7 +12,7 @@ export function PostNavigationView({
   nextPost,
 }: Props): JSX.Element {
   return (
-    <Flex justifyContent="space-between">
+    <Flex justifyContent="space-between" m={4}>
       {previousPost && <PostNavigationItem post={previousPost} />}
       {nextPost && <PostNavigationItem post={nextPost} />}
     </Flex>

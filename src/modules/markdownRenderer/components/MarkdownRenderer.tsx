@@ -1,3 +1,4 @@
+import { Text } from "@chakra-ui/layout";
 import ReactMarkdown from "react-markdown";
 import remarkGemoji from "remark-gemoji";
 import gfm from "remark-gfm";
@@ -23,6 +24,7 @@ export function MarkdownRenderer({ content }: Props): JSX.Element {
       plugins={[remarkGemoji, gfm]}
       children={content}
       components={{
+        p: ({children}) => <Text mb={4}>{children}</Text>,
         h1: MarkdownHeading,
         h2: MarkdownHeading,
         h3: MarkdownHeading,

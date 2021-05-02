@@ -10,8 +10,8 @@ type Props = {
 
 export function PostNavigationItem({ post }: Props): JSX.Element {
   return (
-    <Link href={"/blog/[slug]"} as={`/blog/${post.slug}`}>
-      <Flex flexDirection="column">
+    <Link href={"/[slug]"} as={`/${post.slug}`}>
+      <Flex flexDirection="column" cursor="pointer">
         <PostThumbnail fileName={post.frontmatter.thumbnail} slug={post.slug} />
         <Spacer height="30px" />
         <Text maxWidth="500px">{post.frontmatter.title}</Text>

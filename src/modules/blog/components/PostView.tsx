@@ -40,7 +40,7 @@ export function PostView({
             slug={post.slug}
           />
         </VStack>
-        <Spacer height="30px" />
+        <Spacer height="40px" />
         <Flex
           flexDirection="column"
           maxW="1080px"
@@ -50,8 +50,8 @@ export function PostView({
           <MarkdownRenderer content={post.content} />
         </Flex>
       </Flex>
-      <Spacer height="30px" />
-      <PostNavigationView previousPost={previousPost} nextPost={nextPost} />
+      <Spacer height="50px" />
+      {/* <PostNavigationView previousPost={previousPost} nextPost={nextPost} /> */}
     </Flex>
   );
 }
