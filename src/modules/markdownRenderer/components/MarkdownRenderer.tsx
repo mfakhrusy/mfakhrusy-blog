@@ -21,20 +21,26 @@ export function MarkdownRenderer({ content }: Props): JSX.Element {
   return (
     <ReactMarkdown
       plugins={[remarkGemoji, gfm]}
-      escapeHtml={false}
-      source={content}
-      renderers={{
-        code: CodeBlock,
-        heading: MarkdownHeading,
-        thematicBreak: MarkdownThematicBreak,
-        listItem: MarkdownListItem,
-        list: MarkdownList,
+      children={content}
+      components={{
+        h1: MarkdownHeading,
+        h2: MarkdownHeading,
+        h3: MarkdownHeading,
+        h4: MarkdownHeading,
+        h5: MarkdownHeading,
+        h6: MarkdownHeading,
+        hr: MarkdownThematicBreak,
+        li: MarkdownListItem,
+        ol: MarkdownList,
+        ul: MarkdownList,
         blockquote: MarkdownBlockQuote,
         table: MarkdownTable,
-        tableHead: MarkdownThead,
-        tableBody: MarkdownTbody,
-        tableRow: MarkdownTr,
-        tableCell: MarkdownTableCell,
+        th: MarkdownThead,
+        tbody: MarkdownTbody,
+        tr: MarkdownTr,
+        td: MarkdownTableCell,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        code: ({ node, ...props }) => <CodeBlock {...props} />,
       }}
     />
   );

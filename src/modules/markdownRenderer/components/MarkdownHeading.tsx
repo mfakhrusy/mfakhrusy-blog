@@ -1,4 +1,3 @@
-import ReactMarkdown from "react-markdown";
 import { Heading } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
 
@@ -45,8 +44,7 @@ export function MarkdownHeading(props: PropsWithChildren<Props>): JSX.Element {
         </Heading>
       );
     default: {
-      const Component = ReactMarkdown.renderers.heading;
-      return <Component {...props} />;
+      return null;
     }
   }
 }
