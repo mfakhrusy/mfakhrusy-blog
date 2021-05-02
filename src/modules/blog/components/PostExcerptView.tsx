@@ -53,8 +53,8 @@ export default function PostExcerptView({
           "rgba(0, 0, 0, 0.3) 0px 10px 60px -10px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px",
         lg: "none",
       }}
-      padding={{ base: "15px", lg: "0" }}
-      marginX={{ base: "15px", lg: "0" }}
+      padding={{ base: 4, lg: "0" }}
+      marginX={{ base: 4, lg: "0" }}
       borderRadius={{ base: "10px", lg: "0" }}
     >
       <PostThumbnail slug={slug} fileName={thumbnail} />

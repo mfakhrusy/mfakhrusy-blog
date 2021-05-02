@@ -11,11 +11,13 @@
     "pretty": "yarn prettier --write ."
   },
   "dependencies": {
+    "@chakra-ui/icons": "^1.0.12",
     "@chakra-ui/react": "^1.1.0",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
     "framer-motion": "^3.1.1",
     "gray-matter": "^4.0.2",
+    "lodash": "^4.17.21",
     "next": "^10.0.4",
     "next-compose-plugins": "^2.2.1",
     "next-optimized-images": "^3.0.0-canary.10",

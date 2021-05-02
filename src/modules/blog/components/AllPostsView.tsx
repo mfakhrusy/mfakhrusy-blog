@@ -10,8 +10,6 @@ type Props = {
 const isDevelopment = process.env.NEXT_PUBLIC_NODE_ENV === "development";
 
 export function AllPostsView({ posts, categoryFilter }: Props): JSX.Element {
-  console.log(categoryFilter);
-
   return (
     <Flex flexDirection="column">
       {posts
@@ -22,8 +20,15 @@ export function AllPostsView({ posts, categoryFilter }: Props): JSX.Element {
             return status === "active";
           }
         })
-        .map(({ frontmatter, slug }, index) => (
-          <PostExcerptView frontmatter={frontmatter} slug={slug} key={index} />
+        .filter(({ frontmatter: { category } }) => {
+          if (categoryFilter === 'all') {
+            return true
+          } else {
+            return categoryFilter === category
+          }
+        })
+        .map(({ frontmatter, slug }) => (
+          <PostExcerptView frontmatter={frontmatter} slug={slug} key={slug} />
         ))}
     </Flex>
   );

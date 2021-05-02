@@ -5,9 +5,9 @@ export function Footer(): JSX.Element {
     <Flex
       as="footer"
       borderTop="1px solid #CCCCCC"
-      paddingTop="15px"
+      paddingTop={4}
       paddingBottom="35px"
-      paddingX="15px"
+      paddingX={4}
     >
       <Text>{`© ${new Date().getFullYear()}`} Muhamad Fakhrusy</Text>
     </Flex>
